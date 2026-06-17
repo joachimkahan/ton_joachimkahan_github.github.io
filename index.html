@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joachim Kahan - Portfolio Ingénieur</title>
+    <style>
+        /* Styles CSS modernes et épurés */
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --bg-light: #f8fafc;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-dark);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            text-align: justify;
+        }
+
+        /* Grille des compétences */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-category {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .skill-category h3 {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background-color: #e2e8f0;
+            color: var(--text-main);
+            padding: 0.3rem 0.8rem;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Grille des projets */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+            border-top: 4px solid var(--primary);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            color: var(--primary-dark);
+            font-size: 1.4rem;
+        }
+
+        .project-context {
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .project-card h4 {
+            margin: 1.2rem 0 0.5rem 0;
+            font-size: 1rem;
+            color: var(--text-main);
+        }
+
+        .project-card ul {
+            margin: 0;
+            padding-left: 1.2rem;
+            color: var(--text-muted);
+        }
+
+        .project-card ul li {
+            margin-bottom: 0.3rem;
+        }
+
+        /* Contact */
+        .contact-section {
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 0.5rem;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            background-color: #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Joachim Kahan</h1>
+        <p>Élève-Ingénieur ENSE3 & Double Diplôme IAE | Systèmes Énergétiques, Mécanique & Data</p>
+    </header>
+
+    <div class="container">
+        
+        <section id="about">
+            <h2 class="section-title">Profil & Objectifs</h2>
+            <p class="about-text">
+                Actuellement en deuxième année à Grenoble INP - ENSE3, spécialisé dans la filière Systèmes Énergétiques et Marchés (SEM), et en double cursus Ingénieur-Manager à l'IAE. Fort d'un socle technique transversal allant de la résistance des matériaux à l'intégration d'algorithmes d'intelligence artificielle (RAG, LLM), je conçois des solutions pour optimiser et décarboner les systèmes industriels et électriques. Actuellement Chargé d'affaires en stage au sein du groupe Altrad en Suisse, ce portfolio vise à illustrer concrètement mes compétences en ingénierie à travers mes réalisations les plus abouties.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2 class="section-title">Compétences Techniques</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Mécanique & Physique</h3>
+                    <div class="tags">
+                        <span class="tag">Résistance des Matériaux (RDM)</span>
+                        <span class="tag">Mécanique des fluides</span>
+                        <span class="tag">Modélisation Thermique</span>
+                        <span class="tag">Électrotechnique</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Programmation & Data</h3>
+                    <div class="tags">
+                        <span class="tag">Python (Pandas, NumPy)</span>
+                        <span class="tag">IA Générative (LLM, Prompting)</span>
+                        <span class="tag">RAG & Bases Vectorielles</span>
+                        <span class="tag">Architecture API (FastAPI)</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Ingénierie & Projets</h3>
+                    <div class="tags">
+                        <span class="tag">Dimensionnement Microgrid</span>
+                        <span class="tag">Analyses Technico-Économiques</span>
+                        <span class="tag">Calcul de ROI / CAPEX</span>
+                        <span class="tag">Méthodologie Agile</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title">Projets d'Ingénierie Phares</h2>
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <h3>Conception Mécanique d'une Hydrolienne Fluviale</h3>
+                    <div class="project-context">Modélisation et dimensionnement technico-économique sur le Rhône</div>
+                    <h4>Objectif & Rôle</h4>
+                    <p>En tant que responsable de la partie mécanique du projet, dimensionnement d'une structure de type Savonius capable de résister aux contraintes hydrodynamiques du fleuve (courant max 3,31 m/s) tout en garantissant la viabilité économique.</p>
+                    <h4>Réalisations techniques :</h4>
+                    <ul>
+                        <li>Calculs de Résistance des Matériaux (RDM) pour déterminer l'épaisseur critique des pales en aluminium 6061 face au moment fléchissant.</li>
+                        <li>Dimensionnement du mât central en acier inoxydable et conception d'une plaque de renfort en étoile pour rigidifier l'ensemble.</li>
+                        <li>Sélection de la chaîne électromécanique et étude économique complète (CAPEX matériaux à ~4 000 €, production estimée à 62 MWh/an).</li>
+                    </ul>
+                    <h4>Résultat :</h4>
+                    <p>Validation d'une architecture robuste avec un retour sur investissement modélisé à 10,9 ans pour un budget global maîtrisé de 67k€.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Moteur de Recommandation IA & RAG</h3>
+                    <div class="project-context">Projet industriel logiciel "Audit Flash" mené avec EQUANS</div>
+                    <h4>Objectif & Rôle</h4>
+                    <p>Conception d'un moteur décisionnel backend pour automatiser et fiabiliser la génération d'actions de performance énergétique à partir de données de bâtiments brutes.</p>
+                    <h4>Réalisations techniques :</h4>
+                    <ul>
+                        <li>Implémentation d'une base de données vectorielle (ChromaDB) pour créer un système RAG (Retrieval-Augmented Generation) exploitant l'historique de l'entreprise.</li>
+                        <li>Ingénierie de requêtes sur Azure OpenAI GPT-4o, en forçant des sorties structurées via des schémas Pydantic pour éliminer les hallucinations.</li>
+                        <li>Développement de règles déterministes métiers en Python couplées à l'IA.</li>
+                    </ul>
+                    <h4>Résultat :</h4>
+                    <p>Un logiciel capable d'extraire des données hétérogènes (avec 95% de précision sur natif) et de générer des préconisations pertinentes, divisant drastiquement le temps de rédaction des auditeurs.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Dimensionnement d'un Microgrid Hybride</h3>
+                    <div class="project-context">Étude d'autonomie énergétique pour un village isolé (Maroc)</div>
+                    <h4>Objectif & Rôle</h4>
+                    <p>Modélisation d'une architecture de production électrique pérenne et économique pour un village de 500 habitants hors réseau.</p>
+                    <h4>Réalisations techniques :</h4>
+                    <ul>
+                        <li>Analyse des profils de charge journaliers et saisonniers des 119 habitations.</li>
+                        <li>Étude comparative d'architectures : 100% solaire vs système hybride (PV + Batteries + Groupe électrogène).</li>
+                        <li>Dimensionnement de la solution optimale : 650 panneaux, 34 batteries et un générateur pour lisser les pics de demande.</li>
+                    </ul>
+                    <h4>Résultat :</h4>
+                    <p>Un compromis technico-économique divisant les OPEX massifs du tout-diesel, et réduisant les émissions de CO2 de 1400 tonnes à 250 tonnes sur 20 ans.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Modélisation Thermique d'un Bâtiment</h3>
+                    <div class="project-context">Simulation dynamique "Smart Cities" via la méthode des volumes finis</div>
+                    <h4>Objectif & Rôle</h4>
+                    <p>Création d'un modèle Python from scratch pour évaluer les besoins en chauffage/climatisation d'un espace de vie soumis aux variations climatiques.</p>
+                    <h4>Réalisations techniques :</h4>
+                    <ul>
+                        <li>Conception d'un réseau thermique complexe (20 nœuds, 26 branches) intégrant les transferts par conduction et convection.</li>
+                        <li>Calcul des matrices d'état et intégration temporelle via la méthode d'Euler explicite (NumPy).</li>
+                        <li>Simulation de stratégies de contrôle HVAC (bande morte, refroidissement passif par ouverture des volets).</li>
+                    </ul>
+                    <h4>Résultat :</h4>
+                    <p>Preuve numérique de l'efficacité des stratégies d'inertie passive pour maintenir le confort thermique annuel tout en minimisant la charge mécanique (env. 1475 kWh/an).</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h2 class="section-title">Contact & Liens</h2>
+            <p>Mon profil vous intéresse ? N'hésitez pas à consulter mon CV ou à me contacter sur LinkedIn.</p>
+            <a href="URL_DE_TON_LINKEDIN" class="btn" target="_blank">Mon Profil LinkedIn</a>
+            <a href="mailto:TON_ADRESSE_MAIL" class="btn">M'envoyer un e-mail</a>
+            </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Joachim Kahan. Hébergé sur GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
